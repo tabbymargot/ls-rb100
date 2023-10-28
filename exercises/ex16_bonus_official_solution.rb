@@ -3,7 +3,7 @@ contact_data = [["joe@email.com", "123 Main st.", "555-123-4567"],
 contacts = {"Joe Smith" => {}, "Sally Johnson" => {}}
 fields = [:email, :address, :phone]
 
-#This seems to be the standard way of setting variables for the key/value pair, and the index
+#each_with_index: this seems to be the standard way of setting variables for the key/value pair, and the index. See https://tinyurl.com/59jrfydj
 contacts.each_with_index do |(name, hash), idx|
   
   fields.each do |field|
@@ -12,5 +12,6 @@ contacts.each_with_index do |(name, hash), idx|
     hash[field] = contact_data[idx].shift
     
   end
+puts contacts
   
 end
